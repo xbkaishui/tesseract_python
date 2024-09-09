@@ -25,7 +25,7 @@ checking (Bullet, FCL), kinematics (KDL, OPW, UR), planning (OMPL, Descartes, Tr
 Standalone packages are provided on PyPi (pip install) for Windows and Linux, containing all the native dependencies 
 for Python 3.7+.
 
-The Tesseract Python package is developed and maintained by Wason Technology, LLC.
+The Tesseract Python package is developed and maintained by Wason Technology, LLC. 
 
 **Note that these are low level wrappers.** The lifecycle of objects follow the underlying C++ objects, meaning
 that the target of C++ references may be destroyed before the reference, leading to a memory error. These wrappers
