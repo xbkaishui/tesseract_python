@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - 'dev**'
-      - 'feat/**'
+      # - 'feat/**'
   pull_request:
   release:
     types:
