@@ -40,9 +40,6 @@ jobs:
     - name: Build
       shell: cmd
       run: |
-        set "CI=azure"
-        call activate base
-        conda env list
         mamba activate test
         
         conda config --env --add channels conda-forge
