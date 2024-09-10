@@ -37,6 +37,8 @@ jobs:
 
         set
 
+        pwd
+
         rosdep update
 
         vcs import --input "${{ github.workspace }}/src/tesseract_python/dependencies_with_ext.rosinstall" src/
