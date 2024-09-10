@@ -43,21 +43,19 @@ jobs:
         set "CI=azure"
         call activate base
         conda env list
+        mamba activate test
         
-        choco sources add -n=roswin -s https://aka.ms/ros/public --priority 1
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        choco install ros-%ROS_DISTRO%-desktop_full -y --no-progress
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        choco install swig
-        C:/opt/ros/noetic/x64/python.exe -m pip uninstall pytest-rerunfailures -y
-        if %errorlevel% neq 0 exit /b %errorlevel%
+        conda config --env --add channels conda-forge
+        conda config --env --add channels robostack-staging
+        conda config --env --remove channels defaults
+        mamba install ros-noetic-desktop-full -y
+        mamba deactivate
+        mamba activate test
+
+        mamba install compilers cmake pkg-config make ninja colcon-common-extensions catkin_tools rosdep vcstool -y
+        mamba install vs2019_win-64
 
         call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\VsDevCmd.bat" -arch=amd64 -host_arch=amd64
-        call "C:\opt\ros\%ROS_DISTRO%\x64\setup.bat"
-
-        set
-
-        pwd
 
         rosdep update
 
