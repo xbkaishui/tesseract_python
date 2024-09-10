@@ -59,13 +59,13 @@ jobs:
           python_version: "3.10"
           docs: true
           docs_cmake: ON
-        - os: ubuntu-20.04
-          runs_on: ubuntu-20.04
-          container: ubuntu:20.04
-          py_platform: manylinux_2_31_x86_64
-          python_version: "3.11.0"
-          docs: true
-          docs_cmake: ON
+        # - os: ubuntu-20.04
+        #   runs_on: ubuntu-20.04
+        #   container: ubuntu:20.04
+        #   py_platform: manylinux_2_31_x86_64
+        #   python_version: "3.11.0"
+        #   docs: true
+        #   docs_cmake: ON
         # - os: ubuntu-20.04
         #   runs_on: ubuntu-20.04
         #   container: ubuntu:20.04
@@ -199,7 +199,7 @@ jobs:
         python-version: '${{ matrix.config.python_version }}'
         architecture: ${{ matrix.config.arch }}
     - name: vcpkg build
-      uses: johnwason/vcpkg-action@v5
+      uses: johnwason/vcpkg-action@v4
       with:
         pkgs: >-
           ${{ env.VCPKG_PKGS }}
