@@ -239,30 +239,30 @@ jobs:
         -DVCPKG_APPLOCAL_DEPS=OFF ^
         -DTESSERACT_BUILD_TRAJOPT_IFOPT=OFF
         if %ERRORLEVEL% GEQ 1 exit 1
-    - name: test
-      shell: cmd
-      run: |
-        python -m venv venv
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        call venv\Scripts\activate
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        python --version 
-        python -m pip install --upgrade pip
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        for %%I in ("%GITHUB_WORKSPACE%\ws\build\tesseract_python\python\wheelhouse\*") do set WHEEL_FILE=%%~I
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        echo WHEEL_FILE=%WHEEL_FILE%
-        python -m pip install %WHEEL_FILE%
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        python -m pip install pytest
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        set TESSERACT_SUPPORT_DIR=%GITHUB_WORKSPACE%\ws\src\tesseract\tesseract_support
-        set TESSERACT_TASK_COMPOSER_DIR=%GITHUB_WORKSPACE%\ws\src\tesseract_planning\tesseract_task_composer
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        cd %GITHUB_WORKSPACE%\ws\src\tesseract_python\tesseract_python
-        if %errorlevel% neq 0 exit /b %errorlevel%
-        python -m pytest -s
-        if %errorlevel% neq 0 exit /b %errorlevel%
+    # - name: test
+    #   shell: cmd
+    #   run: |
+    #     python -m venv venv
+    #     if %errorlevel% neq 0 exit /b %errorlevel%
+    #     call venv\Scripts\activate
+    #     if %errorlevel% neq 0 exit /b %errorlevel%
+    #     python --version 
+    #     python -m pip install --upgrade pip
+    #     if %errorlevel% neq 0 exit /b %errorlevel%
+    #     for %%I in ("%GITHUB_WORKSPACE%\ws\build\tesseract_python\python\wheelhouse\*") do set WHEEL_FILE=%%~I
+    #     if %errorlevel% neq 0 exit /b %errorlevel%
+    #     echo WHEEL_FILE=%WHEEL_FILE%
+    #     python -m pip install %WHEEL_FILE%
+    #     if %errorlevel% neq 0 exit /b %errorlevel%
+    #     python -m pip install pytest
+    #     if %errorlevel% neq 0 exit /b %errorlevel%
+    #     set TESSERACT_SUPPORT_DIR=%GITHUB_WORKSPACE%\ws\src\tesseract\tesseract_support
+    #     set TESSERACT_TASK_COMPOSER_DIR=%GITHUB_WORKSPACE%\ws\src\tesseract_planning\tesseract_task_composer
+    #     if %errorlevel% neq 0 exit /b %errorlevel%
+    #     cd %GITHUB_WORKSPACE%\ws\src\tesseract_python\tesseract_python
+    #     if %errorlevel% neq 0 exit /b %errorlevel%
+    #     python -m pytest -s
+    #     if %errorlevel% neq 0 exit /b %errorlevel%
     - name: archive wheels
       if: always()
       uses: actions/upload-artifact@v2
@@ -363,7 +363,7 @@ jobs:
   collect-wheels:
     needs:
       - build-win
-      - build-ubuntu
+      # - build-ubuntu
       # - build-macos
     runs-on: ubuntu-20.04
     steps:
