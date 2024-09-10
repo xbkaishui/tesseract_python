@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - feat/dev
+      # - feat/dev
   pull_request:
   schedule:
     - cron: '0 5 * * *'
