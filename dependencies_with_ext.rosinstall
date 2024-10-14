@@ -9,7 +9,7 @@
 - git:
     local-name: tesseract_planning
     uri: https://github.com/xbkaishui/tesseract_planning.git
-    version: 0.21.6.1
+    version: 0.21.6
 - git:
     local-name: trajopt
     uri: https://github.com/tesseract-robotics/trajopt.git
