@@ -66,6 +66,20 @@ jobs:
           python_version: "3.11.0"
           docs: true
           docs_cmake: ON
+        - os: ubuntu-22.04
+          runs_on: ubuntu-22.04
+          container: ubuntu:22.04
+          py_platform: manylinux_2_31_x86_64
+          python_version: "3.10"
+          docs: true
+          docs_cmake: ON
+        - os: ubuntu-22.04
+          runs_on: ubuntu-22.04
+          container: ubuntu:22.04
+          py_platform: manylinux_2_31_x86_64
+          python_version: "3.11.0"
+          docs: true
+          docs_cmake: ON
         # - os: ubuntu-20.04
         #   runs_on: ubuntu-20.04
         #   container: ubuntu:20.04
