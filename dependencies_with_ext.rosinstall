@@ -5,7 +5,7 @@
 - git:
     local-name: tesseract
     uri: https://github.com/xbkaishui/tesseract.git
-    version: 0.21.5.1
+    version: feat/kdl-rr
 - git:
     local-name: tesseract_planning
     uri: https://github.com/xbkaishui/tesseract_planning.git
