@@ -21,6 +21,7 @@ env:
     yaml-cpp eigen3
     openblas
     fcl ompl taskflow
+    boost-format boost-stacktrace boost-graph
     bullet3[multithreading,double-precision,rtti]
     ccd[double-precision] gperftools
 jobs:
