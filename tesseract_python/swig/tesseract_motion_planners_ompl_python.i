@@ -74,6 +74,8 @@
 %shared_ptr(tesseract_planning::RRTConnectConfigurator)
 %shared_ptr(tesseract_planning::RRTstarConfigurator)
 %shared_ptr(tesseract_planning::InformedRRTstarConfigurator)
+%shared_ptr(tesseract_planning::BITstarConfigurator)
+%shared_ptr(tesseract_planning::AITstarConfigurator)
 %shared_ptr(tesseract_planning::TRRTConfigurator)
 %shared_ptr(tesseract_planning::PRMConfigurator)
 %shared_ptr(tesseract_planning::PRMstarConfigurator)
@@ -98,7 +100,9 @@
   tesseract_planning::PRMstarConfigurator,
   tesseract_planning::LazyPRMstarConfigurator,
   tesseract_planning::SPARSConfigurator,
-  tesseract_planning::InformedRRTstarConfigurator
+  tesseract_planning::InformedRRTstarConfigurator,
+  tesseract_planning::BITstarConfigurator,
+  tesseract_planning::AITstarConfigurator
 )
 
 %shared_ptr(tesseract_planning::OMPLProblem)
