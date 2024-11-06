@@ -276,3 +276,5 @@ input("press enter to exit")
 
 Building the tesseract_python package is complicated and not recommended for novice users. See the wheels.yml
 workflow for details on how to build the packages and all dependencies.
+
+update ompl 1.6
