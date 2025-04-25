@@ -278,4 +278,4 @@ Building the tesseract_python package is complicated and not recommended for nov
 workflow for details on how to build the packages and all dependencies.
 
 update ompl 1.6
-test build
+fix coredump when plan fail
