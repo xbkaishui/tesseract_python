@@ -77,6 +77,7 @@
 %shared_ptr(tesseract_planning::BITstarConfigurator)
 %shared_ptr(tesseract_planning::ABITstarConfigurator)
 %shared_ptr(tesseract_planning::AITstarConfigurator)
+%shared_ptr(tesseract_planning::EITstarConfigurator)
 %shared_ptr(tesseract_planning::TRRTConfigurator)
 %shared_ptr(tesseract_planning::PRMConfigurator)
 %shared_ptr(tesseract_planning::PRMstarConfigurator)
@@ -104,7 +105,8 @@
   tesseract_planning::InformedRRTstarConfigurator,
   tesseract_planning::BITstarConfigurator,
   tesseract_planning::ABITstarConfigurator,
-  tesseract_planning::AITstarConfigurator
+  tesseract_planning::AITstarConfigurator,
+  tesseract_planning::EITstarConfigurator,
 )
 
 %shared_ptr(tesseract_planning::OMPLProblem)
