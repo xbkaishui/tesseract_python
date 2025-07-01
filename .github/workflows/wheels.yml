@@ -225,7 +225,7 @@ jobs:
         extra-args: --clean-after-build
         token: ${{ github.token }}
         cache-key: win-${{ matrix.config.arch }}-python-${{ matrix.config.python_version }}
-        revision: 2024.03.19
+        revision: 2025.06.13
     - name: pip3
       run: |
         python -m pip install numpy==1.26.3
